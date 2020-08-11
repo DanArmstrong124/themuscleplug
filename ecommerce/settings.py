@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-#import env
+import env
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -21,13 +21,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+
+
+#SECRET_KEY = os.environ.get('SECRET_KEY')
+
+SECRET_KEY = '68mvnl&9)_-v2f34rk%68$*!#g1(zk*uta8o7m#y9zsrp4&%&d'
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8080-f833771b-75a0-47da-b24b-3ddc3c5cc933.ws-eu01.gitpod.io',
-    'da-total-graphics.herokuapp.com'
+    '8080-a6df446b-a307-46bc-9fb1-94056829a1ea.ws-eu01.gitpod.io',
+    'channon-project.herokuapp.com'
 ]
 
 
@@ -94,7 +100,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 if "DATABASE_URL" in os.environ:
     DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 else:
-    print("DATABASE URL NOT FOUND - DA TOTAL GRAPHICS - Starting SQLite")
+    print("DATABASE URL NOT FOUND - Channon Project - Starting SQLite")
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -144,7 +150,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 
-AWS_STORAGE_BUCKET_NAME = 'da-total-graphics'
+AWS_STORAGE_BUCKET_NAME = 'the-channon-project'
 AWS_S3_REGION_NAME = 'eu-west-2'
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
