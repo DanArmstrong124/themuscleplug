@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8080-a6df446b-a307-46bc-9fb1-94056829a1ea.ws-eu01.gitpod.io',
-    'channon-project.herokuapp.com'
+    'themuscleplug.herokuapp.com'
 ]
 
 
